@@ -5,6 +5,7 @@ import lombok.Data;
 
 @Data
 public class ActualizarMensajeriaRequest {
+    
     @NotBlank(message = "El asunto no puede estar vacío")
     private String asunto;
 

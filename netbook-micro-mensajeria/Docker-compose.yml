@@ -1,0 +1,20 @@
+services:
+  micro-mensajeria:
+    build: .
+    container_name: micro-mensajeria
+    restart: unless-stopped
+    ports:
+      - "5008:5008"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://host.docker.internal:3306/micro_mensajeria?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+      SPRING_DATASOURCE_USERNAME: micro_mensajeria
+      SPRING_DATASOURCE_PASSWORD: mensajeria.2026@
+      APP_AUTH_BASE_URL: http://micro-auth:5001/api/auth
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      - red-microservicios
+
+networks:
+  red-microservicios:
+    external: true

@@ -5,16 +5,16 @@ import lombok.Data;
 
 @Data
 public class RegistrarMensajeriaRequest {
+
+    @NotBlank(message = "El correo del emisor no puede estar vacío")
+    private String correoEmisor;
+
+    @NotBlank(message = "El correo del receptor no puede estar vacío")
+    private String correoReceptor;
+
     @NotBlank(message = "El asunto no puede estar vacío")
     private String asunto;
 
     @NotBlank(message = "El cuerpo del mensaje no puede estar vacío")
     private String cuerpoMensaje;
-
-    @NotBlank(message = "El estado de lectura no puede estar vacío")
-    private String estadoLectura;
-
-    @NotBlank(message = "La fecha de envío no puede estar vacía")
-    private String fechaEnvio;
-
 }
