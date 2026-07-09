@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-NetbookMicroMensajeriaApplication<netbook-micro-mensajeria>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.netbook_micro_mensajeria.NetbookMicroMensajeriaApplication",
+            "projectName": "netbook-micro-mensajeria",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-NetbookMicroMensajeriaApplication<micro_mensajeria>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.micro_mensajeria.NetbookMicroMensajeriaApplication",
+            "projectName": "micro_mensajeria",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
